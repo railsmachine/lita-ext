@@ -1,4 +1,5 @@
 require 'lita'
+require 'dotenv'
 require 'active_support'
 require 'active_support/core_ext/module/aliasing'
 
@@ -14,6 +15,7 @@ module Lita
 
     def run_with_ext(config_path = nil)
       chdir_to_lita_root
+      load_dotenv
       add_lib_to_load_path
       load_initializers
       load_app_handlers
@@ -28,6 +30,10 @@ module Lita
 
     def chdir_to_lita_root
       Dir.chdir(Lita.root)
+    end
+
+    def load_dotenv
+      Dotenv.load ".env.#{Lita.env}", '.env'
     end
 
     def add_lib_to_load_path
