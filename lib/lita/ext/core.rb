@@ -33,7 +33,7 @@ module Lita
     end
 
     def load_dotenv
-      Dotenv.load '.env', ".env.#{Lita.env}"
+      Dotenv.load ".env.#{Lita.env}", '.env'
     end
 
     def add_lib_to_load_path
