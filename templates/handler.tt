@@ -1,0 +1,2 @@
+class <%= config[:handler_name] %> < Lita::Handler
+end

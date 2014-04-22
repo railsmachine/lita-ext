@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler"
+require "lita/ext/cli"
+
+Lita::Ext::CLI.start
