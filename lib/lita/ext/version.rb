@@ -1,5 +1,5 @@
 module Lita
   module Ext
-    VERSION = "0.0.1.beta5"
+    VERSION = "1.0.0"
   end
 end
