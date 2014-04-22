@@ -18,7 +18,7 @@ The layout of a Lita::Ext bot:
     │   ├── environments
     │   │   ├── development.rb
     │   │   ├── production.rb
-    │   │   └── testing.rb
+    │   │   └── staging.rb
     │   └── initializers
     │       └── initialize_foo.rb
     ├── lib
@@ -55,8 +55,8 @@ Or install it yourself as:
 
 ### Startup Process
 
-Lita::Ext performs serveral actions at startup that makes it easier for you
-to focus on writing customer handlers for your bot. The `Lita.run` method
+Lita::Ext performs serveral actions at startup that make it easier for you
+to focus on writing custom handlers for your bot. The `Lita.run` method
 performs the following additional actions:
 
 1. Change directory to the `Lita.root` directory.
@@ -82,7 +82,7 @@ environment is set with the `LITA_ENV` environment variable and defaults
 to `"development"` when not set. The Lita environment will determine which
 environment configuration to load form the `config/environments` directory
 and which Dotenv settings file to load. Environments can be used to run
-different adapters for development, testing, and production. For example,
+different adapters for development, staging, and production. For example,
 you can use the shell adapter for the development environment and the
 [Campfire adapter](https://github.com/josacar/lita-campfire) in production.
 
