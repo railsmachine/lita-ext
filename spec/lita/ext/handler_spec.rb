@@ -21,7 +21,7 @@ describe Lita::Handler, lita: true do
   it "auto-registers Lita::Handler sub-classes" do
     class TestHandler < Lita::Handler
     end
-    Lita.send(:register_app_handlers)
+    Lita::Ext::Core.new.send(:register_app_handlers)
     expect(Lita.handlers).to include(TestHandler)
   end
 

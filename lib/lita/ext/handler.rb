@@ -3,14 +3,6 @@ require 'lita/handler'
 
 module Lita
   class Handler
-    def log
-      Lita.logger
-    end
-
-    def config
-      Lita.config.handlers[self.class.namespace]
-    end
-
     def config_valid?
       valid = true
       self.class.config_options.each do |config_option|
